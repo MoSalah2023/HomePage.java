@@ -8,7 +8,7 @@ import org.testng.Assert;
 import pages.HomePage;
 import pages.SignupLoginPage;
 
-public class RegistrationTestSteps extends TestBase {
+public class SD_01RegistrationTestSteps extends TestBase {
     HomePage homePageObject = new HomePage(driver);
     SignupLoginPage signupLoginPageObject = new SignupLoginPage(driver);
 

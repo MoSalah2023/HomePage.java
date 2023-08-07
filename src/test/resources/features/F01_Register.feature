@@ -21,3 +21,8 @@ Feature: User Registration
     When user enters char in mobile
     And clicks on register
     Then error message appears
+
+  Scenario: test test
+    Given test
+    When test ttt
+    And testing
