@@ -12,7 +12,7 @@ import java.util.List;
 
 public class P03_homePage extends HomePage {
     By dropDownList=By.id("customerCurrency");
-    WebElement itemPrice = driver.findElement(By.xpath(".//*[@id='chosen_motivos_investimentos_chosen']/div[1]/ul[1]"));
+//    WebElement itemPrice = driver.findElement(By.xpath(".//*[@id='chosen_motivos_investimentos_chosen']/div[1]/ul[1]"));
     By clickOnWishlistButton=By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]");
     By clickOnWishlistLink=By.linkText("Wishlist");
 
@@ -36,7 +36,6 @@ public class P03_homePage extends HomePage {
 //        return price;
 //
 //    }
-
 
     public void product(){
         clickOnElement(clickOnWishlistButton);
