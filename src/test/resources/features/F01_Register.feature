@@ -1,28 +1,13 @@
-Feature: User Registration
+Feature: user registration
 
-  Scenario: Verify that user can register using valid data
-    Given user is in home page
-    When user clicks on signup login button
-    And enter his name
-    And enter his email
-    And clicks on signup button
-    Then user is redirected to signup page
-
-  Scenario: Verify that user can not register using already registered email
-    Given user is in home page
-    When user clicks on signup login button
-    And enter his name
-    And enter his already registered email
-    And clicks on signup button
-    Then error message should appear to the user
-
-  Scenario: verify that user can not enter characters in mobile number field
-    Given user opens register page
-    When user enters char in mobile
-    And clicks on register
-    Then error message appears
-
-  Scenario: test test
-    Given test
-    When test ttt
-    And testing
+  Scenario: User can navigate to home page
+    Given user can navigate to home page
+    When  clicks on register button
+    And select gender
+    And enter first name
+    And enter last name
+    And enter date of birth
+    And enter email
+    And enter passwords
+    When click on register button
+    Then success message will appear

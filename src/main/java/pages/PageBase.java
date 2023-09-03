@@ -1,5 +1,6 @@
 package pages;
 
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,13 @@ public class PageBase {
                 .until(ExpectedConditions.presenceOfElementLocated(elementLocator));
         scrollToElementView(elementLocator);
         driver.findElement(elementLocator).sendKeys(text);
+    }
+    public void pointer(By point){
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(point));
+        scrollToElementView(point);
+       driver.findElement(point).getText();
+
     }
 
 }

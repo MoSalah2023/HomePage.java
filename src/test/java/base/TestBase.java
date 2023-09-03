@@ -7,6 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import java.time.Duration;
+
+
 public class TestBase extends AbstractTestNGCucumberTests {
     public static WebDriver driver;
 
@@ -14,12 +17,17 @@ public class TestBase extends AbstractTestNGCucumberTests {
     public void startBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.navigate().to("https://www.automationexercise.com/");
+        driver.navigate().to("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
     }
 
     @AfterTest
-    public void closeBrowser() {
-        driver.close();
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.quit();
     }
+
+
 }
